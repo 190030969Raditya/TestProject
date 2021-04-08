@@ -1,0 +1,49 @@
+<link rel="stylesheet" type="text/css" href="PurchaserLogin.css">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login form</title>
+ <script type="text/javascript">
+function validate() 
+{
+
+  var e=document.forms["myform"]["pemail"].value;
+  at=e.indexOf("@")
+  dot=e.indexOf(".")
+  if (at<1||dot<at+2||dot+2>e.length)
+   {
+      alert("Enter valid email");
+      return false;
+   }
+
+  var y=document.forms["myform"]["password"].value;
+  if (y=="") 
+  {
+      alert("Password must be filled out");
+      return false;
+  }
+
+  
+}
+</script>
+ 
+</head>
+<body>
+<a href="index.html" class="button">Home</a>
+
+  <center>
+  <form class="pbox" name="myform"action="purchaserLogin" method="post" onsubmit="return validate()">
+       
+  <h3 align=center>LOGIN</h3>
+      <input type="text" name="pemail" placeholder="EMAIL" ><br>
+      
+      <input type="password" name="password" placeholder="Password" ><br><br>
+      
+       <input type="submit" name="Submit" class="button"><br><br>
+       
+       <a href="purchaserRegistration.html">Don't have an account?</a>
+       
+  </form>
+  </center>
+ </body>
+</html>

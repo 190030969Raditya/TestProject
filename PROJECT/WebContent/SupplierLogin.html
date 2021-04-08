@@ -1,0 +1,78 @@
+<link rel="stylesheet" type="text/css" href="SupplierLogin.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login form</title>
+
+<script type="text/javascript">
+function validate() 
+{
+
+  var e=document.forms["myform"]["semail"].value;
+  at=e.indexOf("@")
+  dot=e.indexOf(".")
+  if (at<1||dot<at+2||dot+2>e.length)
+   {
+      alert("Enter valid email");
+      return false;
+   }
+
+  var y=document.forms["myform"]["password"].value;
+  if (y=="") 
+  {
+      alert("Password must be filled out");
+      return false;
+  }
+
+  
+}
+</script>
+
+
+</head>
+<body>
+  <h3 align=center>LOGIN</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<a href="index.html" class="button1">Home</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="supplierRegistration.html" class="button1">Don't have an account?</a>
+
+  <center>
+  <br>
+  <br>
+  <div>
+  <form class="pbox" name="myform" action="SupplierLoginCheck.jsp" method="post" onsubmit="return validate()">
+       <br>
+       <br>
+      <input type="text" name="semail" placeholder="EMAIL" ><br>
+      
+      <input type="password" name="password" placeholder="Password" ><br><br>
+      
+       <input type="submit" name="Submit" class="button"><br><br>
+       
+  </form>
+  <br>
+       
+  </div>
+  </center>
+  
+         
+ </body>
+</html>
